@@ -1,0 +1,471 @@
+/* 
+    웹 폰트: open-sans, 나눔고딕
+    메뉴, 푸터 정보: 15px
+    타이틀(h1 표제): 36 ~ 38px
+    섹션 제목: 32px
+    본문: 16 ~ 18px
+
+    컬러: 메인 컬러(포인트 컬러)
+    제목 컬러: #222
+    본문 컬러: #666
+*/
+/* 초기 설정 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+h1, h2, h3, h4{
+    color: #222;
+}
+p, a{
+    color: #666;
+    line-height: 2em;
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 768px;
+    /* border: 1px solid #000; */
+}
+section{
+    overflow: hidden;
+}
+section h2{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 32px;
+}
+
+
+/* header */
+#main-header{
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.2);
+}
+#main-header .container{
+    height: 100%;
+}
+#main-header h1{
+    position: absolute;
+    left: 0; top: 15px;
+}
+#main-header h1 img{
+    width: 190px;
+}
+
+
+/* menu */
+#main-menu{
+    position: absolute;
+    right: 0; top: 35px;
+}
+#main-menu ul li{
+    display: inline-block;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+#main-menu ul li:last-child{
+    margin-right: 0;
+}
+#main-menu ul li a{
+    font-size: 15px;
+    color: #fff;
+    transition: 0.3s;
+}
+#main-menu ul li a:hover{
+    opacity: 0.6;
+}
+
+
+/* visual */
+#visual{
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    background-image: url('../images/bg1-1.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 1px solid #000;
+}
+#visual .container{
+    position: relative;
+    height: 100%;
+}
+#visual .container .main-title{
+    position: absolute;
+    color: #fff;
+    left: 0; top: 29%;
+}
+#visual .main-title h2{
+    color: #fff;
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+#visual .main-title p{
+    color: #fff;
+    font-size: 22px;
+}
+#visual .btn a{
+    position: absolute;
+    left: 0; top: 540px;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.5s;
+}
+#visual .btn a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+
+/* section - brand */
+#brand{
+    margin-top: 100px; 
+}
+#brand .container{
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+
+/* section - product(foce milano collection) */
+#product{
+    margin-top: 100px;
+}
+#product .container{
+    text-align: center;
+}
+#product .container .products{
+    width: 100%;
+}
+#product .container .products li{
+    width: 32.33%;
+    float: left;
+    margin-right: 1.5%;
+    padding: 0.3em;
+}
+#product .container .products li img{
+    margin-bottom: 0.6em;
+    transition: 0.4s;
+}
+#product .container .products a:hover > img{
+    opacity: 0.8;
+    transform: scale(1.04);
+}
+#product .container .products li:last-child{
+    margin-right: 0;
+}
+
+
+/* section - news(latest news) */
+#news{
+    margin-top: 100px;
+}
+#news h4{
+    font-size: 28px;
+    line-height: 360px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+#news .container{
+    text-align: center;
+}
+#news .container .news-list li{
+    border: 1px solid #000;
+    width: 49.25%;
+    height: 360px;
+    margin-right: 1.5%;
+    float: left;
+}
+/* 배경 이미지 가변 틀 */
+#news .news-list li{
+    transition: 0.3s;
+}
+#news .container .news-list li:first-child{
+    background-color: #eee;
+    background-image: url('../images/fotot.jpg');
+    background-size: cover;
+}
+#news .container .news-list li:last-child{
+    margin-right: 0;
+    background-color: #eee;
+    background-image: url('../images/sale.jpg');
+    background-size: cover;
+}
+#news .container .news-list li:hover{
+    opacity: 0.8;
+}
+
+
+/* section - shop */
+#shop{
+    margin-top: 100px;
+    height: 600px;
+    background-image: url('../images/bg2-2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#shop h2{
+    height: 0;
+    overflow: hidden;
+}
+#shop .container{
+    text-align: center;
+}
+.btn-normal{
+    display: inline-block;
+    font-size: 1.4em;
+    line-height: 0;
+    padding: 32px 55px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    color: #fff;
+    transition: 0.3s;
+}
+.btn-normal:hover{
+    border: 2px solid rgba(255, 255, 255, 1);
+    background: #fff;
+    color: #000;
+}
+ #shop .container .btn-normal{
+    margin-top: 210px;
+}
+
+
+/* section - sns(instagram) */
+#sns{
+    margin-top: 100px;
+    text-align: center;
+}
+#sns ul li{
+    width: 20%;
+    float: left;
+    transition: 0.3s;
+}
+#sns ul li img{
+    width: 100%;
+}
+#sns ul li:hover{
+    opacity: 0.7;
+}
+
+
+/* footer */
+#main-footer{
+    text-align: center;
+    margin-top: 100px;
+    padding: 50px 0;
+    background: #eee; 
+}
+#main-footer .footer-menu{
+    font-size: 14px;
+    margin-bottom: 1em;
+}
+.footer-menu a{
+    margin-right: 0.3em;
+    margin-left: 0.3em;
+}
+.footer-menu a span{
+    font-weight: bold;
+}
+#main-footer .footer-logo a img{
+    width: 130px;
+}
+.footer-text{
+    font-size: 14px;
+    line-height: 1.9;
+}
+.copy{
+    font-size: 14px;
+    margin-top: 1em;
+}
+
+
+/* sub04.css */
+/* 메인 상단 공통 마진 */
+#sub04 main, #buy main, #sub03 main{
+    overflow: hidden;
+    margin-top: 60px;
+}
+#sub04 #main-header{
+    background: #000;
+}
+#sub04 #product .container h2{
+    margin-bottom: 2.3em;
+}
+/* 3개씩 줄내림 */
+#sub04 #product .container .products li:nth-child(3n){
+    margin-right: 0;
+    margin-bottom: 13em;
+}
+/* 서브 공통 푸터 */
+#sub04 #main-footer,
+#buy #main-footer,
+#sub03 #main-footer{
+    background-color: #000;
+}
+#sub04 #main-footer .footer-logo img,
+#buy #main-footer .footer-logo img,
+#sub03 #main-footer .footer-logo img{
+    opacity: 0.7;
+}
+/* 서브 공통 헤더 */
+#sub04 #main-header,
+#buy #main-header,
+#sub03 #main-header{
+    background: rgba(0, 0, 0, 1);
+}
+#sub04 #product h2{
+    text-decoration: underline;
+    font-size: 1.7em;
+}
+
+/* buy css */
+#buy #section-buy{
+    overflow: hidden;
+}
+#buy #section-buy .container figure{
+    width: 48.5%;
+    float: left;
+    padding-top: 100px;
+    margin-right: 3%;
+    text-align: center;
+}
+#buy #section-buy .info-box{
+    width: 48.5%;
+    float: left;
+    padding-top: 70px;
+}
+
+/* 제품 가격 */
+#buy #section-buy .info .price{
+    font-size: 20px;
+    line-height: 2em;
+}
+
+/* 배송비 정보 */
+#buy #section-buy .sub-price{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#buy #section-buy .sub-price .title{
+    font-size: 15px;
+}
+#buy #section-buy .sub-price .price{
+    font-size: 15px;
+}
+
+/* 수량 */
+#buy #section-buy .quantity{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#buy #section-buy .quantity .title{
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+}
+
+/* 수량버튼 UI */
+#buy #section-buy .btn-group{
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+#buy #section-buy .btn-group button, #buy #section-buy .btn-group #number{
+    float: left;
+    padding: 10px;
+    width: 3em;
+    border: 1px solid #ccc;
+    background: transparent;
+    transition: 0.2s;
+}
+#buy #section-buy .btn-group button:hover{
+    background: #333;
+    color: #fff;
+}
+#buy #section-buy .btn-group #number{
+    width: 3.2em;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+}
+
+#buy #section-buy .btn-buy{
+    padding: 16px 48px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+#buy #section-buy .btn-buy:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+#buy #section-buy .btn-cart{
+    padding: 14px 26px;
+    border: 2px solid #333;
+    background-color: transparent;
+    color: #000;
+    border-radius: 3px;
+}
+#buy #section-buy .btn-cart:hover{
+    background: #000;
+    color: #fff;
+}
+#buy #section-buy .shop-caption{
+    margin-top: 2em;
+}
+
+
+/* sub03.css / shop > location 매장 찾기, 오시는 길 */
+#sub03 #location{
+    overflow: hidden;
+    margin-top: 100px;
+}
+#sub03 #location .container{
+    text-align: center;
+}
+#sub03 #location .container p{
+    margin-bottom: 2em;
+}
+.btn-find{
+    background: transparent;
+    padding: 0.8em 2em;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+    line-height: 2;
+}
+.btn-find:hover{
+    background: #000;
+    color: #fff;
+}
+#map{
+    margin-top: 3em;
+}
